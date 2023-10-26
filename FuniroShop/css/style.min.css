@@ -1465,15 +1465,15 @@ body.ie ._ibg img {
 .page {
   flex: 1 1 auto;
 }
-.page__main-slider {
+
+.main-slider {
   background: #fcf8f3;
 }
-.page__main-slider__container {
-  border: 1px solid red;
+.main-slider__container {
   position: relative;
 }
 @media (min-width: 991.98px) {
-  .page__main-slider__container::before {
+  .main-slider__container::before {
     content: "";
     background: #f9f1e7;
     position: absolute;
@@ -1483,29 +1483,29 @@ body.ie ._ibg img {
     height: 100%;
   }
 }
-.page__main-slider__body {
+.main-slider__body {
   padding: 140px 0 0 0;
   position: relative;
   z-index: 2;
 }
 @media (max-width: 991.98px) {
-  .page__main-slider__body {
+  .main-slider__body {
     padding: 80px 0 0 0;
   }
 }
 @media (max-width: 767.98px) {
-  .page__main-slider__body {
+  .main-slider__body {
     padding: 50px 0 0 0;
   }
 }
 @media (min-width: 767.98px) {
-  .page__main-slider__body {
+  .main-slider__body {
     display: flex;
   }
 }
-.page__main-slider__content {
+.main-slider__content {
   flex: 0 0 39.8387096774%;
 }
-.page__main-slider__slider {
+.main-slider__slider {
   flex: 1 1 auto;
 }

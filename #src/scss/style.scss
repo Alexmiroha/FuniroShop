@@ -90,49 +90,48 @@ body {
 
 .page {
   flex: 1 1 auto;
+}
 
-  &__main-slider {
-    background: #fcf8f3;
+.main-slider {
+  background: #fcf8f3;
 
-    &__container {
-      //wtf? 2:07
-      border: 1px solid red;
-      position: relative;
-      @media (min-width: $md2+px) {
-        &::before {
-          content: "";
-          background: #f9f1e7;
-          position: absolute;
-          top: 0;
-          width: 100vw;
-          right: 376px;
-          height: 100%;
-        }
+  &__container {
+    // 2:07
+    position: relative;
+    @media (min-width: $md2+px) {
+      &::before {
+        content: "";
+        background: #f9f1e7;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        right: 376px;
+        height: 100%;
       }
     }
+  }
 
-    &__body {
-      padding: 140px 0 0 0;
-      position: relative;
-      z-index: 2;
-      @media (max-width: $md2+px) {
-        padding: 80px 0 0 0;
-      }
-      @media (max-width: $md3+px) {
-        padding: 50px 0 0 0;
-      }
-      @media (min-width: $md3+px) {
-        display: flex;
-      }
+  &__body {
+    padding: 140px 0 0 0;
+    position: relative;
+    z-index: 2;
+    @media (max-width: $md2+px) {
+      padding: 80px 0 0 0;
     }
+    @media (max-width: $md3+px) {
+      padding: 50px 0 0 0;
+    }
+    @media (min-width: $md3+px) {
+      display: flex;
+    }
+  }
 
-    &__content {
-      flex: 0 0 494/1240 * 100%;
-    }
+  &__content {
+    flex: 0 0 494/1240 * 100%;
+  }
 
-    &__slider {
-      flex: 1 1 auto;
-    }
+  &__slider {
+    flex: 1 1 auto;
   }
 }
 
