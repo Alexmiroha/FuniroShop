@@ -1625,7 +1625,6 @@ body.ie ._ibg img {
 }
 .slider-main__slide {
   position: relative;
-  border: 1px solid red;
 }
 .slider-main__image {
   padding: 0 0 50% 0;
