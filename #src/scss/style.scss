@@ -133,6 +133,92 @@ body {
   &__slider {
     flex: 1 1 auto;
     min-width: 0;
+    @media (min-width: $md2+px) {
+      padding: 0 0 0 32px;
+    }
+  }
+}
+
+.slider-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+
+  &__controls {
+    align-self: stretch;
+    margin: 0 0 20px 0;
+  }
+
+  &__body {
+    overflow: visible;
+    @media (min-width: $md2+px) {
+      @include adaptiv-value("width", 934, 290, 1);
+    }
+  }
+
+  &__slide {
+    position: relative;
+    border: 1px solid red;
+  }
+
+  &__image {
+    padding: 0 0 50% 0;
+  }
+
+  &__content {
+    min-width: 295px;
+    max-height: 300px;
+    overflow: auto;
+    position: absolute;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("padding", 24, 15, 1);
+    @media (min-width: $md3+px) {
+      position: absolute;
+      min-width: 350px;
+      @include adaptiv-value("bottom", 40, 0, 1);
+      @include adaptiv-value("right", 40, 0, 1);
+    }
+    @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(31px);
+    }
+  }
+
+  &__title {
+    @include adaptiv-value("font-size", 28, 22, 1);
+    font-weight: 600;
+    line-height: 120%;
+
+    &:not(:last-child) {
+      margin: 0 0 4px/28px * 1em 0;
+    }
+  }
+
+  &__text {
+    line-height: 150%;
+    color: $grayColor;
+
+    &:not(:last-child) {
+      margin: 0 0 8px/16px * 1em 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row-reverse;
+    line-height: 150%;
+    align-items: center;
+    font-weight: 600;
+    justify-content: space-between;
+    @include adaptiv-value("font-size", 20, 16, 1);
+
+    &::before {
+      margin: 0 0 0 10px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -157,6 +243,7 @@ body {
     @include adaptiv-value("font-size", 56, 24, 1);
     font-weight: 700;
     line-height: 120%;
+
     &:not(:last-child) {
       margin: 0 0 16/56*1em 0;
     }
@@ -167,6 +254,7 @@ body {
     color: $grayColor;
     font-weight: 500;
     line-height: 150%;
+
     &:not(:last-child) {
       margin: 0 0 48/20*1em 0;
     }
@@ -176,13 +264,28 @@ body {
     @include adaptiv-value("min-height", 78, 45, 1);
     @include adaptiv-value("font-size", 20, 16, 1);
     background: $orangeColor;
-    
+    color: #fff;
+    width: 100%;
     @media (any-hover: hover) {
       &:hover {
         background: #be825c;
         //2:15:50
       }
     }
+  }
+}
+
+.controls-slider-main {
+  display: flex;
+  align-items: center;
+
+  &__dots {
+    flex: 1 1 auto;
+    //2:36:50
+  }
+
+  &__arrows {
+
   }
 }
 

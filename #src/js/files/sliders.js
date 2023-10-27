@@ -32,8 +32,6 @@ if (sliders) {
     sliders_bild_callback();
 }
 
-function sliders_bild_callback(params) {
-}
 
 let sliderScrollItems = document.querySelectorAll('._swiper_scroll');
 if (sliderScrollItems.length > 0) {
