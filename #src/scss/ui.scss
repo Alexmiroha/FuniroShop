@@ -7,6 +7,15 @@
   font-weight: 700;
 }
 
+._title {
+@include adaptiv-value("font-size", 40, 24, 1);
+  font-weight: 700;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .slider-arrows {
   display: grid;
   grid-template-columns: repeat(2, 48px);
@@ -103,6 +112,7 @@
   &::after {
     background-color: $orangeColor;
   }
+
   &::before {
     transform: scale(1);
   }
