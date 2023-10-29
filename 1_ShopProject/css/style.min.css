@@ -916,8 +916,44 @@ body.ie ._ibg img {
   width: 100%;
   top: 0;
   left: 0;
+  min-height: 40px;
+}
+@media (max-width: 767.98px) {
+  .header {
+    min-height: 5px;
+  }
+}
+@media (max-width: 767.98px) {
+  .header._scroll .header__wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+@media (min-width: 767.98px) {
+  .header._scroll {
+    transition: all 0.3s ease 0s;
+  }
+  .header._scroll .header__wrapper {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-20px);
+  }
+}
+@media (min-width: 767.98px) and (any-hover: hover) {
+  .header._scroll .header__wrapper:hover {
+    background-color: rgb(255, 255, 255);
+    transform: translateY(0);
+  }
+  .header._scroll .header__wrapper:hover .header__body {
+    opacity: 1;
+  }
+}
+@media (min-width: 767.98px) {
+  .header._scroll .header__body {
+    opacity: 0.3;
+    min-height: 50px;
+  }
 }
 .header__wrapper {
+  transition: all 0.4s ease 0s;
   position: fixed;
   width: 100%;
   top: 0;
@@ -925,6 +961,7 @@ body.ie ._ibg img {
   z-index: 50;
 }
 .header__body {
+  transition: all 0.4s ease 0s;
   display: flex;
   align-items: center;
   padding: 5px 0;
@@ -1844,4 +1881,59 @@ body.ie ._ibg img {
   .controls-slider-main__arrows {
     display: none;
   }
+}
+
+.advantages {
+  padding-top: 88px;
+  padding-top: 88px;
+}
+@media (max-width: 1270px) {
+  .advantages {
+    padding-top: calc(30px + 58 * (100vw - 320px) / 950);
+  }
+}
+@media (max-width: 1270px) {
+  .advantages {
+    padding-top: calc(30px + 58 * (100vw - 320px) / 950);
+  }
+}
+.advantages__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.advantages__item {
+  display: inline-grid;
+  padding: 15px 0;
+  grid-template: auto auto/85px 1fr;
+}
+@media (max-width: 993.98px) {
+  .advantages__item {
+    min-width: 323px;
+  }
+}
+@media (max-width: 767.98px) {
+  .advantages__item {
+    grid-template: auto auto/auto 1fr;
+  }
+}
+.advantages__icon {
+  text-align: center;
+  align-self: center;
+  grid-row: span 2;
+}
+@media (max-width: 767.98px) {
+  .advantages__icon {
+    padding: 0 15px 0 0;
+  }
+}
+.advantages__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0 0 0.1111111111em 0;
+}
+.advantages__text {
+  line-height: 150%;
+  color: #898989;
 }
