@@ -383,6 +383,14 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  @media (any-hover: hover) {
+    &:hover {
+      .item-product__actions {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 
   &__labels {
     position: absolute;
@@ -456,14 +464,21 @@ body {
     font-weight: 600;
 
     &_old {
-      @include adaptiv-value("font-size", 20, 16, 1);
+      @include adaptiv-value("font-size", 16, 14, 1);
       font-weight: normal;
       margin: 0 0 0 16px;
+      color: #b0b0b0;
+      text-decoration: line-through;
     }
   }
 
   &__actions {
+    @media (any-hover: none) {
+      padding: 15px 0 0 0;
+    }
     @media (any-hover: hover) {
+      opacity: 0;
+      visibility: hidden;
       position: absolute;
       top: 0;
       left: 0;
@@ -472,6 +487,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: all .3s ease 0s;
       background-color: rgba(58, 58, 58, .74);
       z-index: 3;
     }
@@ -494,7 +510,21 @@ body {
   }
 
   &__link {
-    //3:18:43
+    display: flex;
+    align-items: center;
+    color: indianred;
+    font-weight: 600;
+    transition: color .3s ease 0s;
+    &::before {
+      margin: 0 10px 0 0;
+      font-size: 16px;
+    }
+    @media (any-hover: hover) {
+      color: #fff;
+      &:hover {
+        color: $orangeColor;
+      }
+    }
   }
 }
 
