@@ -31,6 +31,7 @@
 }
 
 .slider-arrow {
+  pointer-events: auto;
   border-radius: 50%;
   height: 48px;
   background-color: rgba(227, 145, 94, 0.3);
